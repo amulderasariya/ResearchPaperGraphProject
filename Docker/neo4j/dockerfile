@@ -1,0 +1,9 @@
+FROM neo4j:latest
+
+LABEL maintainer="Amul Derasariya Goutham"
+
+COPY --chown=neo4j neo4j.dump dumps/neo4j.dump
+COPY --chown=neo4j mgt-entrypoint.sh mgt-entrypoint.sh
+RUN chmod +x mgt-entrypoint.sh
+ENTRYPOINT ["./mgt-entrypoint.sh"]
+CMD ["neo4j"]

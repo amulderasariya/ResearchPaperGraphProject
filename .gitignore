@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+/SeedDataApp/neo4j
+/SeedDataApp/seeddata
+.dump
+dblp.v12.json
